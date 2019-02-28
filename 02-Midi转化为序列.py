@@ -2,7 +2,7 @@
 import mido
 
 CurrentTime=0   #采用绝对时间计时
-SongName="V.K\\Melody of elves"              #待操作音乐名称
+SongName="Pianoboy\\The truth that you leave"              #待操作音乐名称
 path1="data\Commands\Main"      #主旋律指令地址
 path2="data\Sequence\Main"      #主旋律序列存放地址
 path3="data\Commands\Assistant"      #辅助旋律指令地址

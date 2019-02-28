@@ -2,7 +2,7 @@
 from mido import MidiFile,MidiTrack,Message
 import mido
 
-SongName="V.K\\Melody of elves"              #待操作音乐名称
+SongName="Pianoboy\\The truth that you leave"              #待操作音乐名称
 
 Song=MidiFile("data\Midi\\"+SongName+".mid")
 for i, track in enumerate(Song.tracks):

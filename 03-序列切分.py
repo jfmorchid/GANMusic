@@ -1,7 +1,7 @@
 #coding=utf-8
 path1="data\Sequence\Main"      #主旋律序列存放地址
 path2="data\TrainingDataset"    #切分后序列存放地址
-SongName="V.K\\Melody of elves"             #待操作音乐名称
+SongName="Pianoboy\\The truth that you leave"              #待操作音乐名称
 CutLength=50              #切分的长度
 
 f=open(path1+"\\"+SongName+".txt")

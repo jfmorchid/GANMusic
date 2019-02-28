@@ -2,11 +2,12 @@
 import mido
 from mido import MidiTrack,MidiFile,Message
 
-CurrentTime=0   #绝对时间轴
+CurrentTime=16080   #绝对时间轴
 Track,Music=MidiTrack(),MidiFile()
 SongName="Pianoboy\\105 days"              #待操作音乐名称
 path1="data\Sequence\Main"      #主旋律序列存放地址
 path2="output.mid"              #输出音乐存放地址
+Instrument=1        #默认乐器为钢琴
 
 def addNote(StartTime,Notes,FinishTime):
     global CurrentTime,Track
@@ -24,8 +25,8 @@ def addNote(StartTime,Notes,FinishTime):
 
 
 Track.append(mido.MetaMessage("set_tempo",tempo=714280,time=0)) #设定默认的四分音符拍速
-#f=open(path1+"\\"+SongName+".txt")
-f=open('water.txt')
+Track.append(Message('program_change', program=Instrument, time=0))     #根据需要更改乐器种类
+f=open(path1+"\\"+SongName+".txt")
 Command=f.readlines()
 Command=[x[:-1] for x in Command]   #去除"\n"
 StartTime,Notes,FinishTime=["" for _ in range(len(Command))],["" for _ in range(len(Command))],["" for _ in range(len(Command))] #初始化开始时间，音符与结束时间这三个列表
